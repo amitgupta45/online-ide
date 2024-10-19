@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Box, Button, Text, useToast } from "@chakra-ui/react";
 import { executeCode } from "../api";
-// import { Absolute } from "chakra-ui";
 
 const Output = ({ editorRef, language }) => {
   const toast = useToast();
@@ -32,16 +31,13 @@ const Output = ({ editorRef, language }) => {
 
   return (
     <Box w="50%">
-      <Text mb={5} fontSize="lg">
+      <Text mb={2} fontSize="lg">
         Output
       </Text>
       <Button
         variant="outline"
-        height="26px"
-        padding="10px"
-        background="grey"
         colorScheme="green"
-        mb={2}
+        mb={4}
         isLoading={isLoading}
         onClick={runCode}
       >
